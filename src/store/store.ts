@@ -1,0 +1,21 @@
+import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
+import { Cryptocurrency } from '../types';
+import { getCryptos } from '../services/CryptoService';
+
+type cryptoStore = {
+  cryptocurrencies: Cryptocurrency[];
+  fetchCryptos: () => Promise<void>;
+};
+
+export const useCryptoStore = create<cryptoStore>()(
+  devtools((set) => ({
+    cryptocurrencies: [],
+    fetchCryptos: async () => {
+      const cryptocurrencies = await getCryptos();
+      set(() => ({
+        cryptocurrencies,
+      }));
+    },
+  }))
+);

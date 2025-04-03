@@ -1,0 +1,83 @@
+:root {
+  --white: #fff;
+  --primary: #61ecbc;
+  --black: #182339;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-image: url(/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 60rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.8rem;
+  margin-top: 5rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.title span {
+  display: block;
+  color: var(--primary);
+  font-size: 4.4rem;
+}
+
+.content {
+  margin-top: 5rem;
+  padding: 6rem 2rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.form,
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label {
+  color: var(--black);
+}
+
+.form select {
+  background-color: #ecebeb;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+}
+
+.form [type='submit'] {
+  background-color: var(--primary);
+  color: var(--black);
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 300ms ease;
+}
+
+.form [type='submit']:hover {
+  background-color: #0cb378;
+}
